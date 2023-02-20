@@ -16,6 +16,7 @@ async function signBitcoinSegwitKey({ signMessage, root }: { signMessage: string
     const messagePrefix = network?.messagePrefix;
     const magicHash = bitcoinMessage.magicHash(signMessage);
 
+    console.log('magicHash: ', magicHash)
     console.log('verify? ', bitcoinMessage.verify(signMessage, sendAddressSegwit as string, signature, messagePrefix, true))
 
     return {
