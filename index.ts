@@ -11,7 +11,9 @@ async function signBitcoinSegwitKey({ signMessage, root }: { signMessage: string
 
     const privateKey = childSegwit.privateKey as Buffer;
     const pubKey = childSegwit.publicKey as Buffer;
-    const signature = bitcoinMessage.sign(signMessage, keyPair.privateKey as Buffer, keyPair.compressed);
+    const signature = bitcoinMessage.sign(signMessage, keyPair.privateKey as Buffer, keyPair.compressed, '', {
+        segwitType: "p2sh(p2wpkh)"
+    });
     const { address: sendAddressSegwit, network } = bitcoin.payments.p2wpkh({ pubkey: keyPair.publicKey });
     const messagePrefix = network?.messagePrefix;
     const magicHash = bitcoinMessage.magicHash(signMessage);
