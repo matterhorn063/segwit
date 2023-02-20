@@ -28,6 +28,6 @@
     "@types/node": "^18.13.0",
     "bip32": "^3.1.0",
     "bitcoinjs-lib": "5.0.0",
-    "bitcoinjs-message": "https://github.com/matterhorn063/bitcoinjs-message#0.0.2"
+    "bitcoinjs-message": "https://github.com/matterhorn063/bitcoinjs-message#0.0.3"
   }
 }

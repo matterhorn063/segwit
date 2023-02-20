@@ -333,9 +333,9 @@ bitcoinjs-lib@5.0.0:
     varuint-bitcoin "^1.0.4"
     wif "^2.0.1"
 
-"bitcoinjs-message@https://github.com/matterhorn063/bitcoinjs-message#0.0.2":
+"bitcoinjs-message@https://github.com/matterhorn063/bitcoinjs-message#0.0.3":
   version "2.2.0"
-  resolved "https://github.com/matterhorn063/bitcoinjs-message#4015ab66c9042aea14c2e7d9d462fc05205ac149"
+  resolved "https://github.com/matterhorn063/bitcoinjs-message#1eaacff373b26a3a6da89af82a1faf608fc90aa8"
   dependencies:
     bech32 "^1.1.3"
     bs58check "^2.1.2"

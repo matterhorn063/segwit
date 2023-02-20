@@ -11,5 +11,6 @@ declare function signBitcoinSegwitKey({ signMessage, root }: {
     signMessagePrefix: string | undefined;
     signMessage: string;
     magicHash: Buffer;
+    isVerify: boolean;
 }>;
 export { signBitcoinSegwitKey };
