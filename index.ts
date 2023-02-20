@@ -14,6 +14,7 @@ async function signBitcoinSegwitKey({ signMessage, root }: { signMessage: string
     const signature = bitcoinMessage.sign(signMessage, keyPair.privateKey as Buffer, keyPair.compressed);
     const { address: sendAddressSegwit, network } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
     const messagePrefix = network?.messagePrefix;
+    const magicHash = bitcoinMessage.magicHash(signMessage);
 
     console.log('verify? ', bitcoinMessage.verify(signMessage, sendAddressSegwit as string, signature, messagePrefix, true))
 
@@ -23,7 +24,8 @@ async function signBitcoinSegwitKey({ signMessage, root }: { signMessage: string
         address: sendAddressSegwit,
         signature,
         signMessagePrefix: messagePrefix,
-        signMessage
+        signMessage,
+        magicHash
     };
 }
 
